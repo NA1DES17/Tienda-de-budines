@@ -1,3 +1,14 @@
+window.addEventListener("scroll", function () {
+  var header = this.document.querySelector("header");
+  var main = this.document.querySelector("main");
+  header.classList.toggle("abajo", this.window.scrollY > 0);
+  main.classList.toggle("abajo", this.window.scrollY > 0);
+});
+// -----------------------------
+document.addEventListener("dblclick", function (event) {
+  event.preventDefault();
+});
+// -----------------------------
 document.addEventListener("DOMContentLoaded", () => {
   // Seleccionamos todos los contenedores de tarjetas
   const tarjetas = document.querySelectorAll(".tarjeta");
@@ -10,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Inicializamos el valor del display
     let cantidad = 0;
-    //display.value = cantidad;
 
     // Evento para el botón de suma
     plusButton.addEventListener("click", () => {
