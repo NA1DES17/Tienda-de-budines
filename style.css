@@ -31,19 +31,23 @@ header {
   flex-direction: row;
   align-content: center;
   align-items: center;
+  font-family: "Fraunces", serif;
 }
 header .logo {
   position: relative;
-  font-weight: bold;
   font-size: 2em;
   letter-spacing: 2px;
   transition: 1.5s;
   color: #212121;
   text-decoration: none;
-  font-style: oblique;
+
+  font-family: "Playwrite AR", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 header.abajo {
-  background-color: #b2dfdb;
+  background-color: #b2dfdbb9;
   padding: 15px 20px;
   padding: 15px;
   height: 20px;
@@ -83,6 +87,7 @@ header ul li a {
   margin-top: 105px;
 }
 .tarjeta {
+  font-family: "Fraunces", serif;
   border: solid 0.5px #ffbc42;
   box-shadow: 0 0.625rem 0.1875rem rgba(0, 0, 0, 0.12),
     0 0.625rem 0.125px rgba(0, 0, 0, 0.24);
@@ -115,7 +120,6 @@ header ul li a {
 .productInfo {
   display: flex;
   flex-direction: column;
-  font-family: "Monserrat", sans-serif;
   font-weight: 100;
   font-size: 24px;
   height: max-content;
@@ -127,12 +131,14 @@ header ul li a {
   margin-bottom: 8%;
 }
 .productInfo p {
+  font-family: "Monserrat", sans-serif;
   color: var(--colorP);
+  padding: 2%;
 }
 /* ---------Texto--------- */
 /* ---------Contador--------- */
 .price {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-left: 7%;
   margin-right: 7%;
   font-style: oblique;
