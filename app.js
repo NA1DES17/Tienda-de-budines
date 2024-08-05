@@ -13,10 +13,30 @@ document.addEventListener("dblclick", function (event) {
 // --------------No doble click zoom---------------
 // --------------Botones y display---------------
 document.addEventListener("DOMContentLoaded", () => {
-  // Seleccionamos todos los contenedores de tarjetas
-  const tarjetas = document.querySelectorAll(".tarjeta");
+  //Seleccionamos todos los <h2> de TITLE
+  const titulos = document.querySelectorAll(".title");
+  //Iteramos sobre los <h2> TITLE para agregar el titulo
+  for (let i = 0; i < titulos.length; i++) {
+    titulos[i].innerHTML = listaBudines[i].sabor;
+  }
 
-  // Iteramos sobre cada tarjeta para agregar los eventos a los botones
+  //Seleccionamos todos los <p> de PRICE
+  const precios = document.querySelectorAll(".price");
+  //Iteramos sobre los <p> PRICE para agregar el precio
+  for (let i = 0; i < precios.length; i++) {
+    precios[i].innerHTML = listaBudines[i].precio;
+  }
+
+  //Seleccionamos todos los <p> de DESCRIPTION
+  const descripciones = document.querySelectorAll(".description");
+  //Iteramos sobre los <p> DESCRIPTION para agregar el precio
+  for (let i = 0; i < precios.length; i++) {
+    descripciones[i].innerHTML = listaBudines[i].descripción;
+  }
+
+  // Seleccionamos todos los contenedores de TARJETAS
+  const tarjetas = document.querySelectorAll(".tarjeta");
+  // Iteramos sobre cada TARJETAS para agregar los eventos a los botones
   tarjetas.forEach((tarjeta) => {
     const plusButton = tarjeta.querySelector(".plus");
     const delButton = tarjeta.querySelector(".del");
@@ -50,6 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
       valores.push(display.value);
     });
     console.log(valores); // Aquí puedes hacer lo que quieras con la lista de valores
+    //Los sabores y los valores se juntan para el mensaje
+    for (let i = 0; i < valores.length; i++) {
+      const mensaje = `${listaBudines[i].sabor}: ${valores[i]}`;
+      console.log(mensaje);
+    }
   }
 });
 // --------------Botones y display---------------
@@ -100,4 +125,4 @@ const chocolate = new Budin(
   "El budín de chocolate es un tipo de postre con sabor a chocolate parecido a un pastel."
 );
 
-vainilla.saludar();
+const listaBudines = [vainilla, limon, naranja, ingles, marmolado, chocolate];
