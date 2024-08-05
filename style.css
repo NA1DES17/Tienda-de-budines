@@ -165,11 +165,13 @@ header ul li a {
   width: 5vw;
   height: 5vw;
   background-image: url("src/icons8-más-64.png");
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
 }
 .del {
   width: 5vw;
   height: 5vw;
   background-image: url("src/icons8-borrar-para-siempre-64.png");
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
 }
 .display {
   font-size: 24px;
