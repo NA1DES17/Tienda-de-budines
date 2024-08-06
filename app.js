@@ -69,15 +69,29 @@ document.addEventListener("DOMContentLoaded", () => {
       const display = tarjeta.querySelector(".display");
       valores.push(display.value);
     });
-    console.log(valores); // Aquí puedes hacer lo que quieras con la lista de valores
     //Los sabores y los valores se juntan para el mensaje
     for (let i = 0; i < valores.length; i++) {
       const mensaje = `${listaBudines[i].sabor}: ${valores[i]}`;
-      console.log(mensaje);
     }
   }
+
+  // Evento para el botón Hacer Pedido
+  /*document.getElementById("hacerPedido").addEventListener("click", () => {
+    const nombre = document.getElementById("name").value;
+    tarjetas.forEach((tarjeta, index) => {
+      const display = tarjeta.querySelector(".display");
+      const cantidad = display.value;
+      if (cantidad > 0) {
+        const sabor = listaBudines[index].sabor;
+        console.log(
+          `Nombre: ${nombre}, Producto: ${sabor}, Cantidad: ${cantidad}`
+        );
+      }
+    });
+  });*/
 });
 // --------------Botones y display---------------
+
 // --------------Objeto budín---------------
 class Budin {
   constructor(sabor, precio, descripción) {
@@ -93,7 +107,7 @@ class Budin {
 }
 // --------------Objeto budín---------------
 
-// Creamos un objeto de la clase Budin
+// --------------Productos---------------
 const vainilla = new Budin(
   "Vainilla",
   "$10.000,00",
