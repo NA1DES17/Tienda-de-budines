@@ -1,3 +1,4 @@
+import Budin from "./Budin.js";
 // --------------Sticky header---------------
 window.addEventListener("scroll", function () {
   var header = this.document.querySelector("header");
@@ -64,48 +65,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Función para actualizar la lista de valores de los displays
   function updateValues() {
-    const valores = [];
+    // const valores = [];
+    valores;
     tarjetas.forEach((tarjeta) => {
       const display = tarjeta.querySelector(".display");
       valores.push(display.value);
     });
-    //Los sabores y los valores se juntan para el mensaje
-    for (let i = 0; i < valores.length; i++) {
-      const mensaje = `${listaBudines[i].sabor}: ${valores[i]}`;
-    }
   }
 
   // Evento para el botón Hacer Pedido
-  /*document.getElementById("hacerPedido").addEventListener("click", () => {
+  document.getElementById("hacerPedido").addEventListener("click", () => {
     const nombre = document.getElementById("name").value;
+    let mensaje = `Hola, soy ${nombre}\nQuiero:\n`;
+
+    // Recorremos cada tarjeta para obtener el sabor y cantidad
     tarjetas.forEach((tarjeta, index) => {
       const display = tarjeta.querySelector(".display");
       const cantidad = display.value;
       if (cantidad > 0) {
         const sabor = listaBudines[index].sabor;
-        console.log(
-          `Nombre: ${nombre}, Producto: ${sabor}, Cantidad: ${cantidad}`
-        );
+        mensaje += `- ${sabor}: ${cantidad}\n`;
       }
     });
-  });*/
+    if (nombre === "") {
+      alert("Por favor ingrese su nombre");
+    } else {
+      // Codificar el mensaje para la URL
+      const mensajeCodificado = encodeURIComponent(mensaje);
+      const urlWhatsApp = `https://api.whatsapp.com/send?phone=5491138561101&text=${mensajeCodificado}`;
+      window.open(urlWhatsApp, "_blank");
+      //window.location.href = urlWhatsApp;
+    }
+
+    /*const mostrarPedido = document.getElementById("mostrarPedido");
+    const pedidoFinalizado = document.getElementById("pedidoFinalizado");
+    mostrarPedido.addEventListener("click", () => {
+      pedidoFinalizado.innerHTML = `Un ${mensaje} pento`;
+    });*/
+  });
 });
 // --------------Botones y display---------------
-
-// --------------Objeto budín---------------
-class Budin {
-  constructor(sabor, precio, descripción) {
-    this.sabor = sabor;
-    this.precio = precio;
-    this.descripción = descripción;
-  }
-  saludar() {
-    console.log(
-      `Hola, soy un budin de ${this.sabor}, salgo ${this.precio} y ${this.descripción}`
-    );
-  }
-}
-// --------------Objeto budín---------------
 
 // --------------Productos---------------
 const vainilla = new Budin(
@@ -140,3 +139,13 @@ const chocolate = new Budin(
 );
 
 const listaBudines = [vainilla, limon, naranja, ingles, marmolado, chocolate];
+const valores = [];
+const hacerPedido = document.getElementById("hacerPedido");
+const pedidoTerminado = [];
+
+/*hacerPedido.addEventListener("click", () => {
+  for (let i = 0; i < listaBudines.length; i++) {
+    const mensaje = `Quiero pedir: ${listaBudines[i].sabor}: ${valores[i]}`;
+    console.log(mensaje);
+  }
+});*/
