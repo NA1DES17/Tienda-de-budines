@@ -1,4 +1,6 @@
 import Budin from "./Budin.js";
+const nombre = document.getElementById("name").value;
+let mensaje = `Hola, soy ${nombre}\nQuiero:\n`;
 // --------------Sticky header---------------
 window.addEventListener("scroll", function () {
   var header = this.document.querySelector("header");
@@ -75,9 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Evento para el botón Hacer Pedido
   document.getElementById("hacerPedido").addEventListener("click", () => {
-    const nombre = document.getElementById("name").value;
-    let mensaje = `Hola, soy ${nombre}\nQuiero:\n`;
-
     // Recorremos cada tarjeta para obtener el sabor y cantidad
     tarjetas.forEach((tarjeta, index) => {
       const display = tarjeta.querySelector(".display");
@@ -96,13 +95,12 @@ document.addEventListener("DOMContentLoaded", () => {
       window.open(urlWhatsApp, "_blank");
       //window.location.href = urlWhatsApp;
     }
-
-    /*const mostrarPedido = document.getElementById("mostrarPedido");
-    const pedidoFinalizado = document.getElementById("pedidoFinalizado");
-    mostrarPedido.addEventListener("click", () => {
-      pedidoFinalizado.innerHTML = `Un ${mensaje} pento`;
-    });*/
   });
+  /*const mostrarPedido = document.getElementById("mostrarPedido");
+  const pedidoFinalizado = document.getElementById("pedidoFinalizado");
+  mostrarPedido.addEventListener("click", () => {
+    pedidoFinalizado.innerHTML = `${mensaje}`;
+  });*/
 });
 // --------------Botones y display---------------
 
@@ -142,10 +140,3 @@ const listaBudines = [vainilla, limon, naranja, ingles, marmolado, chocolate];
 const valores = [];
 const hacerPedido = document.getElementById("hacerPedido");
 const pedidoTerminado = [];
-
-/*hacerPedido.addEventListener("click", () => {
-  for (let i = 0; i < listaBudines.length; i++) {
-    const mensaje = `Quiero pedir: ${listaBudines[i].sabor}: ${valores[i]}`;
-    console.log(mensaje);
-  }
-});*/
