@@ -1,6 +1,6 @@
 import Budin from "./Budin.js";
-const nombre = document.getElementById("name").value;
-let mensaje = `Hola, soy ${nombre}\nQuiero:\n`;
+// const nombre = document.getElementById("name").value;
+// let mensaje = `Hola, soy ${nombre}\nQuiero:\n`;
 // --------------Sticky header---------------
 window.addEventListener("scroll", function () {
   var header = this.document.querySelector("header");
@@ -76,31 +76,44 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Evento para el botón Hacer Pedido
-  document.getElementById("hacerPedido").addEventListener("click", () => {
+  document.getElementById("verPedido").addEventListener("click", () => {
+    const nombre = document.getElementById("name").value;
+    let mensaje = `<strong>Mi pedido:</strong>\n<br>`;
+    let mensajeWp = `Hola, soy ${nombre}\nTe pido:\n`;
     // Recorremos cada tarjeta para obtener el sabor y cantidad
     tarjetas.forEach((tarjeta, index) => {
       const display = tarjeta.querySelector(".display");
       const cantidad = display.value;
+
       if (cantidad > 0) {
         const sabor = listaBudines[index].sabor;
-        mensaje += `- ${sabor}: ${cantidad}\n`;
+        mensaje += `- ${sabor}: ${cantidad}\n<br>`;
+        mensajeWp += `- ${sabor}: ${cantidad}\n`;
       }
     });
     if (nombre === "") {
       alert("Por favor ingrese su nombre");
     } else {
       // Codificar el mensaje para la URL
-      const mensajeCodificado = encodeURIComponent(mensaje);
-      const urlWhatsApp = `https://api.whatsapp.com/send?phone=5491138561101&text=${mensajeCodificado}`;
-      window.open(urlWhatsApp, "_blank");
-      //window.location.href = urlWhatsApp;
+      const mensajeCodificado = encodeURIComponent(mensajeWp);
+      const enviarPedido = document.getElementById("enviarPedido");
+      const pedidoFinalizado = document.getElementById("pedidoFinalizado");
+      //Mostramos el pedido en pantalla
+      pedidoFinalizado.innerHTML = mensaje;
+      //Botón de confirmación del pedido
+      enviarPedido.style.display = "flex";
+      enviarPedido.addEventListener("click", () => {
+        // Enviamos el pedido por WhatsApp
+        const urlWhatsApp = `https://api.whatsapp.com/send?phone=5491138561101&text=${mensajeCodificado}`;
+        //window.location.href = urlWhatsApp;
+
+        alert("Pedido realizado\n(La página se recargará)");
+        setTimeout(window.open(urlWhatsApp, "_blank"), 10000);
+        window.scrollTo(0, 0);
+        window.location.reload();
+      });
     }
   });
-  /*const mostrarPedido = document.getElementById("mostrarPedido");
-  const pedidoFinalizado = document.getElementById("pedidoFinalizado");
-  mostrarPedido.addEventListener("click", () => {
-    pedidoFinalizado.innerHTML = `${mensaje}`;
-  });*/
 });
 // --------------Botones y display---------------
 
@@ -138,5 +151,3 @@ const chocolate = new Budin(
 
 const listaBudines = [vainilla, limon, naranja, ingles, marmolado, chocolate];
 const valores = [];
-const hacerPedido = document.getElementById("hacerPedido");
-const pedidoTerminado = [];
