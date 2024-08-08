@@ -259,6 +259,14 @@ header ul li a {
 }
 /* /Placeholder name */
 
+.btnPedidos {
+  background-color: #fc8c79;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 10px;
+  padding: 7px;
+}
+
 /* ---------/Pedido--------- */
 
 /* ---------Footer--------- */

@@ -66,20 +66,37 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Función para actualizar la lista de valores de los displays
+  let sumaTotal = 0; // Variable global para almacenar el total
+
   function updateValues() {
-    // const valores = [];
-    valores;
-    tarjetas.forEach((tarjeta) => {
+    sumaTotal = 0; // Reiniciamos el total
+    valores.length = 0; // Limpiamos el array de valores
+
+    tarjetas.forEach((tarjeta, index) => {
       const display = tarjeta.querySelector(".display");
-      valores.push(display.value);
+      const cantidad = parseInt(display.value);
+      const precio = parseFloat(
+        listaBudines[index].precio.replace(/[^0-9.-]+/g, "")
+      ); // Convertir el precio a número
+
+      if (cantidad > 0) {
+        valores.push(cantidad);
+        sumaTotal += cantidad * precio; // Sumar el total por cada producto
+      } else {
+        valores.push(0);
+      }
     });
+
+    // Mostrar el total en la interfaz
+    const totalDisplay = document.getElementById("totalDisplay");
+    totalDisplay.innerHTML = `Total: $${sumaTotal.toLocaleString()}`;
   }
 
-  // Evento para el botón Hacer Pedido
   document.getElementById("verPedido").addEventListener("click", () => {
     const nombre = document.getElementById("name").value;
     let mensaje = `<strong>Mi pedido:</strong>\n<br>`;
     let mensajeWp = `Hola, soy ${nombre}\nTe pido:\n`;
+
     // Recorremos cada tarjeta para obtener el sabor y cantidad
     tarjetas.forEach((tarjeta, index) => {
       const display = tarjeta.querySelector(".display");
@@ -91,6 +108,11 @@ document.addEventListener("DOMContentLoaded", () => {
         mensajeWp += `- ${sabor}: ${cantidad}\n`;
       }
     });
+
+    // Agregar el total al mensaje
+    mensaje += `<strong>Total: $${sumaTotal.toLocaleString()}</strong>`;
+    mensajeWp += `Total: $${sumaTotal.toLocaleString()}`;
+
     if (nombre === "") {
       alert("Por favor ingrese su nombre");
     } else {
@@ -98,14 +120,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const mensajeCodificado = encodeURIComponent(mensajeWp);
       const enviarPedido = document.getElementById("enviarPedido");
       const pedidoFinalizado = document.getElementById("pedidoFinalizado");
-      //Mostramos el pedido en pantalla
+
+      // Mostramos el pedido en pantalla
       pedidoFinalizado.innerHTML = mensaje;
-      //Botón de confirmación del pedido
+
+      // Botón de confirmación del pedido
       enviarPedido.style.display = "flex";
       enviarPedido.addEventListener("click", () => {
         // Enviamos el pedido por WhatsApp
         const urlWhatsApp = `https://api.whatsapp.com/send?phone=5491138561101&text=${mensajeCodificado}`;
-        //window.location.href = urlWhatsApp;
 
         alert("Pedido realizado\n(La página se recargará)");
         setTimeout(window.open(urlWhatsApp, "_blank"), 10000);
@@ -120,32 +143,32 @@ document.addEventListener("DOMContentLoaded", () => {
 // --------------Productos---------------
 const vainilla = new Budin(
   "Vainilla",
-  "$10.000,00",
+  "$100.50",
   "El budín de vainilla es la receta tradicional del budín saborizado con vainilla."
 );
 const limon = new Budin(
   "Limon",
-  "$20.000,00",
+  "$200.00",
   "El budín de limón es la receta tradicional del budín saborizado con limón."
 );
 const naranja = new Budin(
   "Naranja",
-  "$30.000,00",
+  "$300.00",
   "El budín de naranja es la receta tradicional del budín saborizado con naranja."
 );
 const ingles = new Budin(
   "Ingles",
-  "$40.000,00",
+  "$400.75",
   "El budín inglés o <em>plum cake</em> es un bizcocho hecho con frutos secos, frutas confitadas y algun tipo de licor."
 );
 const marmolado = new Budin(
   "Marmolado",
-  "$50.000,00",
+  "$500.00",
   "El budín Marmolado se caracteriza por ser bicolor, generalmente es combinado de chocolate y vainilla."
 );
 const chocolate = new Budin(
   "Chocolate",
-  "$60.000,00",
+  "$600.00",
   "El budín de chocolate es un tipo de postre con sabor a chocolate parecido a un pastel."
 );
 
