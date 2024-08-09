@@ -289,11 +289,9 @@ footer {
 /* ---------Footer--------- */
 @media (min-width: 768px) {
   header {
-    /* width: 95.5vw; */
     width: 97vw;
   }
   header.abajo {
-    /* width: 96.2vw; */
     width: 97.5vw;
   }
   .contenedor {
