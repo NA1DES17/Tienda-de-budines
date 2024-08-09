@@ -102,9 +102,17 @@ header ul li a {
   justify-content: center;
 }
 /* ---------Imagen--------- */
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  width: 100%;
+  height: 30%;
+  margin-top: 10%;
+}
 .card-img {
   background-color: #ffcaa6;
-  height: 35%;
+  height: 100%;
   width: 98%;
   border-radius: 0.5rem;
   transition: 0.3s ease;
@@ -123,8 +131,8 @@ header ul li a {
   font-weight: 100;
   font-size: 24px;
   height: max-content;
-  margin-top: 17%;
-  margin-left: 5%;
+  height: 50%;
+  padding: 17% 10% 5% 10%; /*U-R-D-L*/
 }
 .productInfo h2 {
   font-size: 2rem;
@@ -148,8 +156,8 @@ header ul li a {
   display: flex;
   align-items: center;
   justify-content: left;
-  margin-top: 17%;
-  padding-top: 2rem;
+  /* margin-top: 17%; 
+  padding-top: 2rem;*/
   border-top: 0.0625rem solid #ddd;
 }
 .boton {
@@ -279,3 +287,25 @@ footer {
   letter-spacing: 6px;
 }
 /* ---------Footer--------- */
+@media (min-width: 768px) {
+  header {
+    width: 95.5vw;
+  }
+  header.abajo {
+    width: 96.2vw;
+  }
+  .contenedor {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tarjeta {
+    width: 30%;
+    /* margin-top: 7%; */
+  }
+  .plus,
+  .del {
+    width: 2vw;
+    height: 2vw;
+  }
+}
