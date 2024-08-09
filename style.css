@@ -282,7 +282,7 @@ footer {
   text-transform: uppercase;
   text-align: center;
   font-size: 12px;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   margin-top: 5%;
   letter-spacing: 6px;
 }
@@ -307,5 +307,8 @@ footer {
   .del {
     width: 2vw;
     height: 2vw;
+  }
+  footer {
+    margin-bottom: 5%;
   }
 }
