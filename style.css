@@ -301,7 +301,7 @@ footer {
   }
   .tarjeta {
     width: 30%;
-    /* margin-top: 7%; */
+    max-width: 378px;
   }
   .plus,
   .del {
