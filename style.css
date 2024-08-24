@@ -40,7 +40,6 @@ header .logo {
   transition: 1.5s;
   color: #212121;
   text-decoration: none;
-
   font-family: "Playwrite AR", cursive;
   font-optical-sizing: auto;
   font-weight: weight;
@@ -287,12 +286,53 @@ footer {
   letter-spacing: 6px;
 }
 /* ---------Footer--------- */
+
+/* ------------------Estilos index------------------ */
+
+#mainFold {
+  border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95vw;
+}
+#mainFold h1 {
+  text-align: center;
+  padding: 10px;
+}
+#mainFold p {
+  padding: 10px;
+}
+.cta {
+  background-color: #fc8c79;
+  border: none;
+  height: 60px;
+  width: 213px;
+  border-radius: 4px;
+  margin: 70px;
+}
+.cta a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+.videoContainer {
+  border: 1px solid blue;
+  width: 94vw;
+  height: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ------------------Estilos index------------------ */
+
 @media (min-width: 768px) {
   header {
-    width: 97vw;
+    width: 96vw;
   }
   header.abajo {
-    width: 97.5vw;
+    width: 96.5vw;
   }
   .contenedor {
     flex-direction: row;
