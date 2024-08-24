@@ -290,7 +290,6 @@ footer {
 /* ------------------Estilos index------------------ */
 
 #mainFold {
-  border: solid 1px red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -324,6 +323,38 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#benefits {
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  margin: 20px;
+}
+#benefits h2 {
+  text-align: center;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.beneficios {
+  display: flex;
+  list-style-type: none;
+  background-color: #b2dfdb;
+  margin: 12px;
+  width: 33vw;
+  height: 33vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 4px;
+}
+#howToWorks {
+  width: 95vw;
+  border: solid 1px red;
 }
 /* ------------------Estilos index------------------ */
 
