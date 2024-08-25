@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
@@ -27,7 +28,19 @@
       href="https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&display=swap"
       rel="stylesheet"
     />
-
+    <!-- BootStrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- My style -->
     <link rel="stylesheet" href="style.css" />
     <title>LobuDine</title>
   </head>
@@ -36,8 +49,8 @@
       <a href="./index.html" class="logo">LobuDine</a>
       <nav>
         <ul>
-          <li><a href="./pedidos.html">Productos</a></li>
-          <li><a href="#p2">Formas de pago</a></li>
+          <li><a href="#p1">Productos</a></li>
+          <li><a href="#faq">Preguntas</a></li>
           <li><a href="#p3">Envíos</a></li>
         </ul>
       </nav>
@@ -73,7 +86,61 @@
       </div>
       <div id="testimonials">
         <h2>¿Qué dicen nuestros clientes?</h2>
-        <div class="testimonialContainer">Acá hay que inventar algo</div>
+        <div class="testimonialContainer">
+          <div
+            id="carouselExampleAutoplaying"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="src/Opiniones/opinion1.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="src/Opiniones/opinion2.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="src/Opiniones/opinion3.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
       </div>
       <div id="faq">
         <h2>¿Preguntas frecuentes?</h2>
@@ -82,6 +149,7 @@
       <button class="cta"><a href="./pedidos.html">HACER PEDIDO</a></button>
       <footer>LobuDine&copy; 2024 &diam; ALL RIGHTS RESERVED</footer>
     </div>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
 
