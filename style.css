@@ -363,9 +363,6 @@ ul {
   border: solid 1px red;
   width: 95vw;
 }
-.opinion {
-  border-radius: 12px;
-}
 
 .testimonialContainer {
   position: relative;
@@ -374,17 +371,15 @@ ul {
   margin: auto;
   overflow: hidden;
 }
-
 .slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
-
 .opinion {
   width: 100%;
   flex-shrink: 0;
+  border-radius: 12px;
 }
-
 .prev,
 .next {
   position: absolute;
@@ -396,15 +391,12 @@ ul {
   padding: 10px;
   cursor: pointer;
 }
-
 .prev {
   left: 0;
 }
-
 .next {
   right: 0;
 }
-
 button:focus {
   outline: none;
 }
