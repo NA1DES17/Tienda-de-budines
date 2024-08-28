@@ -1,6 +1,5 @@
 import Budin from "./Budin.js";
-// const nombre = document.getElementById("name").value;
-// let mensaje = `Hola, soy ${nombre}\nQuiero:\n`;
+
 // --------------Sticky header---------------
 window.addEventListener("scroll", function () {
   var header = this.document.querySelector("header");
