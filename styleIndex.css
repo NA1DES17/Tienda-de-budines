@@ -135,6 +135,9 @@ nav {
   border: 1px solid blue;
   width: 94vw;
   height: 60vw;
+  /* max-width: 1200px; */
+  max-width: 804px;
+  max-height: 452px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -146,6 +149,7 @@ nav {
   flex-direction: column;
   width: 95vw;
   margin: 20px;
+  max-height: 452px;
 }
 #benefits h2 {
   text-align: center;
@@ -172,7 +176,11 @@ ul {
 /* ---------How to Works--------- */
 #howToWorks {
   width: 95vw;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
+  margin-bottom: 4vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #howToWorks h2 {
   margin: 12px;
@@ -181,6 +189,9 @@ ul {
 /* ---------Opiniones--------- */
 #testimonials {
   width: 90vw;
+}
+#testimonials h2 {
+  margin-bottom: 3vw;
 }
 
 .testimonialContainer {
@@ -241,7 +252,7 @@ button:focus {
 }
 .acordeon-cuerpo h2 {
   margin-top: 32px;
-  font-size: 32px;
+  font-size: 36px;
 }
 .acordeon .contenedor-acordeon {
   position: relative;
@@ -252,7 +263,7 @@ button:focus {
 .acordeon .etiqueta {
   position: relative;
   padding: 10px 0;
-  font-size: 30px;
+  font-size: 24px;
   color: black;
   cursor: pointer;
 }
@@ -284,10 +295,14 @@ button:focus {
   margin-left: 0;
   border: 1px solid grey;
 }
+.acordeon .contenedor-acordeon.activa .etiqueta {
+  font-weight: bold;
+}
 /* Muestra la parte de contenido cuando está activa. Establece la altura */
 .acordeon .contenedor-acordeon.activa .contenido {
   /* height: 150px; */
   height: auto;
+  padding-top: 6vw;
 }
 /* Cambia de signo positivo a negativo una vez activado */
 .acordeon .contenedor-acordeon.activa .etiqueta::before {
@@ -298,13 +313,36 @@ button:focus {
 /* ---------Preg. Frecuents--------- */
 /* ---------Footer--------- */
 footer {
+  border-top: 2px solid #b2dfdb36;
+  padding-top: 2%;
   text-transform: uppercase;
   text-align: center;
   font-size: 12px;
   margin-bottom: 5%;
-  margin-top: 5%;
+  /* margin-top: 5%; */
   letter-spacing: 6px;
+  width: 88vw;
 }
 /* ---------Footer--------- */
-/* @media (min-width: 768px) {} */
+@media (min-width: 768px) {
+  #benefits {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    margin: 20px;
+    max-height: 452px;
+  }
+  .beneficios {
+    display: flex;
+    list-style-type: none;
+    background-color: #b2dfdb;
+    margin: 12px;
+    width: 20vw;
+    height: 20vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 4px;
+  }
+}
 /* ------------------Estilos index------------------ */
