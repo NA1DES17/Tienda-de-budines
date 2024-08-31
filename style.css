@@ -19,7 +19,7 @@ body {
   position: fixed;
   top: 0;
   left: 10;
-  width: 93vw;
+  width: 93.5vw;
   height: 40px;
   display: flex;
   justify-content: space-around;
@@ -84,6 +84,8 @@ nav {
   align-items: center;
   border-radius: 12px 12px 0px 0px;
   margin-top: 105px;
+  /* border: solid 1px red; */
+  width: 97%;
 }
 .tarjeta {
   font-family: "Fraunces", serif;
@@ -288,7 +290,7 @@ footer {
 /* ---------Footer--------- */
 
 /* ------------------Estilos index------------------ */
-
+/* ---------Main Fold--------- */
 #mainFold {
   display: flex;
   flex-direction: column;
@@ -324,7 +326,8 @@ footer {
   align-items: center;
   justify-content: center;
 }
-
+/* ---------Main Fold--------- */
+/* ---------Beneficios--------- */
 #benefits {
   display: flex;
   flex-direction: column;
@@ -352,6 +355,8 @@ ul {
   text-align: center;
   border-radius: 4px;
 }
+/* ---------Beneficios--------- */
+/* ---------How to Works--------- */
 #howToWorks {
   width: 95vw;
   margin-bottom: 12px;
@@ -359,8 +364,10 @@ ul {
 #howToWorks h2 {
   margin: 12px;
 }
+/* ---------How to Works--------- */
+/* ---------Opiniones--------- */
 #testimonials {
-  width: 95vw;
+  width: 90vw;
 }
 
 .testimonialContainer {
@@ -399,34 +406,25 @@ ul {
 button:focus {
   outline: none;
 }
+/* ---------Opiniones--------- */
+/* ---------Preg. Frecuents--------- */
 #faq {
-  border: solid 1px red;
+  /* border: solid 1px red; */
   width: 95vw;
 }
 /* Acordeon */
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
-
-/* Establece el color de fondo del cuerpo en azul. Establece el tipo de letra a Rubik */
-
-body {
-  background-color: #0a2344;
-  font-family: "rubik", sans-serif;
-}
-
-/* Alinea el texto del encabezado al centro. */
-
-h1 {
-  text-align: center;
-}
-
 /* Establece el ancho del acordeón. Establece el margen a 90px en la parte superior e inferior y auto a la izquierda y derecha */
 
 .acordeon {
   width: 70vw;
-  margin: 90px auto;
+  /* margin: 90px auto; */
   color: black;
-  background-color: white;
+  background-color: var(--othBgc);
   padding: 45px 45px;
+}
+.acordeon-cuerpo h2 {
+  margin: 10vw 1vw 1vw 10vw;
+  font-size: 32px;
 }
 .acordeon .contenedor-acordeon {
   position: relative;
@@ -458,7 +456,7 @@ h1 {
 
 .acordeon .contenido {
   position: relative;
-  background: white;
+  background: var(--othBgc);
   height: 0;
   font-size: 20px;
   text-align: justify;
@@ -489,6 +487,7 @@ h1 {
 }
 
 /* Acordeon */
+/* ---------Preg. Frecuents--------- */
 /* ------------------Estilos index------------------ */
 
 @media (min-width: 768px) {
