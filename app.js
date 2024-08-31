@@ -13,9 +13,6 @@ document.addEventListener("dblclick", function (event) {
   event.preventDefault();
 });
 // --------------No doble click zoom---------------
-//---------------Slider----------------------------
-
-//---------------Slider----------------------------
 // --------------Botones y display---------------
 document.addEventListener("DOMContentLoaded", () => {
   //Seleccionamos todos los <h2> de TITLE

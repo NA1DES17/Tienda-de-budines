@@ -14,12 +14,12 @@ body {
   justify-content: center;
 }
 /* ---------Header--------- */
-#sticky {
+header {
   background-color: #b2dfdb;
   position: fixed;
   top: 0;
-  left: 10;
-  width: 93.5vw;
+  left: 0;
+  width: 90vw;
   height: 40px;
   display: flex;
   justify-content: space-around;
@@ -33,19 +33,20 @@ body {
   align-items: center;
   font-family: "Fraunces", serif;
 }
-#sticky .logo {
+header .logo {
   position: relative;
   font-size: 2em;
   letter-spacing: 2px;
   transition: 1.5s;
   color: #212121;
   text-decoration: none;
+
   font-family: "Playwrite AR", cursive;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
 }
-#sticky.abajo {
+header.abajo {
   background-color: #b2dfdbb9;
   padding: 15px 20px;
   padding: 15px;
@@ -57,14 +58,14 @@ nav {
   justify-content: center;
   align-items: center;
 }
-#sticky ul {
+header ul {
   position: relative;
   display: flex;
   flex-direction: column;
   list-style: none;
   text-transform: uppercase;
 }
-#sticky ul li a {
+header ul li a {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 15px;
@@ -84,8 +85,6 @@ nav {
   align-items: center;
   border-radius: 12px 12px 0px 0px;
   margin-top: 105px;
-  /* border: solid 1px red; */
-  width: 97%;
 }
 .tarjeta {
   font-family: "Fraunces", serif;
@@ -288,214 +287,12 @@ footer {
   letter-spacing: 6px;
 }
 /* ---------Footer--------- */
-
-/* ------------------Estilos index------------------ */
-/* ---------Main Fold--------- */
-#mainFold {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 95vw;
-}
-#mainFold h1 {
-  text-align: center;
-  padding: 10px;
-}
-#mainFold p {
-  padding: 10px;
-}
-.cta {
-  background-color: #fc8c79;
-  border: none;
-  height: 60px;
-  width: 213px;
-  border-radius: 4px;
-  margin: 70px;
-}
-.cta a {
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-}
-.videoContainer {
-  border: 1px solid blue;
-  width: 94vw;
-  height: 60vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-/* ---------Main Fold--------- */
-/* ---------Beneficios--------- */
-#benefits {
-  display: flex;
-  flex-direction: column;
-  width: 95vw;
-  margin: 20px;
-}
-#benefits h2 {
-  text-align: center;
-}
-ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.beneficios {
-  display: flex;
-  list-style-type: none;
-  background-color: #b2dfdb;
-  margin: 12px;
-  width: 33vw;
-  height: 33vw;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 4px;
-}
-/* ---------Beneficios--------- */
-/* ---------How to Works--------- */
-#howToWorks {
-  width: 95vw;
-  margin-bottom: 12px;
-}
-#howToWorks h2 {
-  margin: 12px;
-}
-/* ---------How to Works--------- */
-/* ---------Opiniones--------- */
-#testimonials {
-  width: 90vw;
-}
-
-.testimonialContainer {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  overflow: hidden;
-}
-.slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-.opinion {
-  width: 100%;
-  flex-shrink: 0;
-  border-radius: 12px;
-}
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-.prev {
-  left: 0;
-}
-.next {
-  right: 0;
-}
-button:focus {
-  outline: none;
-}
-/* ---------Opiniones--------- */
-/* ---------Preg. Frecuents--------- */
-#faq {
-  /* border: solid 1px red; */
-  width: 95vw;
-}
-/* Acordeon */
-/* Establece el ancho del acordeón. Establece el margen a 90px en la parte superior e inferior y auto a la izquierda y derecha */
-
-.acordeon {
-  width: 70vw;
-  /* margin: 90px auto; */
-  color: black;
-  background-color: var(--othBgc);
-  padding: 45px 45px;
-}
-.acordeon-cuerpo h2 {
-  margin: 10vw 1vw 1vw 10vw;
-  font-size: 32px;
-}
-.acordeon .contenedor-acordeon {
-  position: relative;
-  margin: 10px 10px;
-}
-
-/* Posiciona las etiquetas en relación con el contenedor. Añade relleno en la parte superior e inferior y aumenta el tamaño de la fuente. También hace que su cursor sea un puntero */
-
-.acordeon .etiqueta {
-  position: relative;
-  padding: 10px 0;
-  font-size: 30px;
-  color: black;
-  cursor: pointer;
-}
-/* Posiciona el signo más a 5px de la derecha. Lo centra utilizando la propiedad transform. */
-
-.acordeon .etiqueta::before {
-  content: "+";
-  color: black;
-  position: absolute;
-  top: 50%;
-  right: -5px;
-  font-size: 30px;
-  transform: translateY(-50%);
-}
-
-/* Oculta el contenido (altura: 0), disminuye el tamaño de la fuente, justifica el texto y añade la transición */
-
-.acordeon .contenido {
-  position: relative;
-  background: var(--othBgc);
-  height: 0;
-  font-size: 20px;
-  text-align: justify;
-  width: 58vw;
-  overflow: hidden;
-  transition: 0.5s;
-}
-
-/* Añade una línea horizontal entre los contenidos */
-
-.acordeon hr {
-  width: 100;
-  margin-left: 0;
-  border: 1px solid grey;
-}
-/* Muestra la parte de contenido cuando está activa. Establece la altura */
-
-.acordeon .contenedor-acordeon.activa .contenido {
-  /* height: 150px; */
-  height: auto;
-}
-
-/* Cambia de signo positivo a negativo una vez activado */
-
-.acordeon .contenedor-acordeon.activa .etiqueta::before {
-  content: "-";
-  font-size: 30px;
-}
-
-/* Acordeon */
-/* ---------Preg. Frecuents--------- */
-/* ------------------Estilos index------------------ */
-
 @media (min-width: 768px) {
   header {
-    width: 96vw;
+    width: 97vw;
   }
   header.abajo {
-    width: 96.5vw;
+    width: 97.5vw;
   }
   .contenedor {
     flex-direction: row;
