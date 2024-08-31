@@ -204,7 +204,7 @@ ul {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.151);
   color: white;
   border: none;
   padding: 10px;
@@ -224,28 +224,31 @@ button:focus {
 #faq {
   /* border: solid 1px red; */
   width: 95vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 /* Acordeon */
 /* Establece el ancho del acordeón. Establece el margen a 90px en la parte superior e inferior y auto a la izquierda y derecha */
-
 .acordeon {
-  width: 70vw;
+  width: 90vw;
   /* margin: 90px auto; */
   color: black;
   background-color: var(--othBgc);
-  padding: 45px 45px;
+  /* padding: 45px 45px; */
+  /* border: solid 1px greenyellow; */
 }
 .acordeon-cuerpo h2 {
-  margin: 10vw 1vw 1vw 10vw;
+  margin-top: 32px;
   font-size: 32px;
 }
 .acordeon .contenedor-acordeon {
   position: relative;
   margin: 10px 10px;
+  /* border: solid 1px violet; */
 }
-
 /* Posiciona las etiquetas en relación con el contenedor. Añade relleno en la parte superior e inferior y aumenta el tamaño de la fuente. También hace que su cursor sea un puntero */
-
 .acordeon .etiqueta {
   position: relative;
   padding: 10px 0;
@@ -254,7 +257,6 @@ button:focus {
   cursor: pointer;
 }
 /* Posiciona el signo más a 5px de la derecha. Lo centra utilizando la propiedad transform. */
-
 .acordeon .etiqueta::before {
   content: "+";
   color: black;
@@ -264,41 +266,45 @@ button:focus {
   font-size: 30px;
   transform: translateY(-50%);
 }
-
 /* Oculta el contenido (altura: 0), disminuye el tamaño de la fuente, justifica el texto y añade la transición */
-
 .acordeon .contenido {
   position: relative;
   background: var(--othBgc);
   height: 0;
   font-size: 20px;
-  text-align: justify;
-  width: 58vw;
+  text-align: center;
+  width: 80vw;
   overflow: hidden;
   transition: 0.5s;
+  /* border: solid 1px red;*/
 }
-
 /* Añade una línea horizontal entre los contenidos */
-
 .acordeon hr {
   width: 100;
   margin-left: 0;
   border: 1px solid grey;
 }
 /* Muestra la parte de contenido cuando está activa. Establece la altura */
-
 .acordeon .contenedor-acordeon.activa .contenido {
   /* height: 150px; */
   height: auto;
 }
-
 /* Cambia de signo positivo a negativo una vez activado */
-
 .acordeon .contenedor-acordeon.activa .etiqueta::before {
   content: "-";
   font-size: 30px;
 }
-
 /* Acordeon */
 /* ---------Preg. Frecuents--------- */
+/* ---------Footer--------- */
+footer {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  letter-spacing: 6px;
+}
+/* ---------Footer--------- */
+/* @media (min-width: 768px) {} */
 /* ------------------Estilos index------------------ */
