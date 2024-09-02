@@ -157,6 +157,7 @@ nav {
 .imgPrincipal {
   margin-bottom: 4vh;
   border-radius: 12px;
+  box-shadow: 2px 2px 35px 2px rgba(255, 188, 66, 1);
 }
 .opciones {
   display: flex;
@@ -165,7 +166,7 @@ nav {
 .op {
   width: 14vw;
   height: 14vw;
-  margin: 0px 2vw;
+  margin: 0px 0.5vw;
   border-radius: 12px;
   border: none;
 }
@@ -176,7 +177,7 @@ nav {
 }
 .op:hover {
   transform: scale(1.05);
-  box-shadow: #ffbc42 2px 2px;
+  box-shadow: 1px 1px 32px 1px rgba(255, 188, 66, 1);
 }
 /* ---------galeria--------- */
 /* ---------Main Fold--------- */
@@ -418,7 +419,7 @@ footer {
   .op {
     width: 8vw;
     height: 8vw;
-    margin: 0px 2vw;
+    margin: 0px 1vw;
     border-radius: 12px;
   }
   .imgOpc {

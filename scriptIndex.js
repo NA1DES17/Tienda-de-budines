@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   imgPrincipal.src = "src/budinChocolate.png";
   opButtons.forEach((button) => {
     button.addEventListener("click", function () {
-      console.log(button.value);
+      //console.log(button.value);
       switch (button.value) {
         case "ingles":
           imgPrincipal.src = "src/budinIngles.png";
@@ -67,6 +67,10 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
         case "vainilla":
           imgPrincipal.src = "src/budinVainilla.png";
+          break;
+        case "chocolate":
+          imgPrincipal.src = "src/budinChocolate.png";
+          break;
       }
     });
   });
