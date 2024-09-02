@@ -179,6 +179,25 @@ nav {
   transform: scale(1.05);
   box-shadow: 1px 1px 32px 1px rgba(255, 188, 66, 1);
 }
+
+/*------------------------------------------*/
+/* Estilos para la imagen seleccionada */
+.selected {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 0 10px rgba(255, 188, 66, 1); /* Agrega un efecto de sombra azul */
+}
+
+.selected::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Capa semi-transparente */
+  border-radius: 12px; /* Mantén el borde redondeado */
+  pointer-events: none; /* Permite que la imagen aún sea clickeable */
+}
 /* ---------galeria--------- */
 /* ---------Main Fold--------- */
 /* ---------Beneficios--------- */

@@ -46,12 +46,21 @@ showSlide(slideIndex);
 // --------------Galeria---------------
 document.addEventListener("DOMContentLoaded", function () {
   const opButtons = document.querySelectorAll(".op");
-  const opImages = document.querySelectorAll(".imgOpc");
   const imgPrincipal = document.getElementById("imgPrincipal");
+
+  // Configura la imagen principal inicial
   imgPrincipal.src = "src/budinChocolate.png";
+
+  // Añade el evento de clic a cada botón de la galería
   opButtons.forEach((button) => {
     button.addEventListener("click", function () {
-      //console.log(button.value);
+      // Remover la clase 'selected' de todos los botones
+      opButtons.forEach((btn) => btn.classList.remove("selected"));
+
+      // Agregar la clase 'selected' al botón clicado
+      button.classList.add("selected");
+
+      // Actualizar la imagen principal según el valor del botón
       switch (button.value) {
         case "ingles":
           imgPrincipal.src = "src/budinIngles.png";
