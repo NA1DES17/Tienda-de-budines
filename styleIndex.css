@@ -163,9 +163,9 @@ nav {
   flex-direction: row;
 }
 .op {
-  width: 16vw;
-  height: 16vw;
-  margin: 0px 2.5vw;
+  width: 14vw;
+  height: 14vw;
+  margin: 0px 2vw;
   border-radius: 12px;
 }
 /* ---------galeria--------- */
