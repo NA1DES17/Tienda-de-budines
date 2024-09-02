@@ -46,31 +46,26 @@ showSlide(slideIndex);
 // --------------Galeria---------------
 document.addEventListener("DOMContentLoaded", function () {
   const opButtons = document.querySelectorAll(".op");
+  const opImages = document.querySelectorAll(".imgOpc");
   const imgPrincipal = document.getElementById("imgPrincipal");
   imgPrincipal.src = "src/budinChocolate.png";
   opButtons.forEach((button) => {
     button.addEventListener("click", function () {
       console.log(button.value);
-      imgPrincipal.style.border = "solid 1px red";
       switch (button.value) {
         case "ingles":
-          imgPrincipal.style.border = "solid 3px blue";
           imgPrincipal.src = "src/budinIngles.png";
           break;
         case "limon":
-          imgPrincipal.style.border = "solid 3px yellow";
           imgPrincipal.src = "src/budinLimon.png";
           break;
         case "marmolado":
-          imgPrincipal.style.border = "solid 3px brown";
           imgPrincipal.src = "src/budinMarmolado.jpeg";
           break;
         case "naranja":
-          imgPrincipal.style.border = "solid 3px orange";
           imgPrincipal.src = "src/budinNaranja.png";
           break;
         case "vainilla":
-          imgPrincipal.style.border = "solid 3px pink";
           imgPrincipal.src = "src/budinVainilla.png";
       }
     });
