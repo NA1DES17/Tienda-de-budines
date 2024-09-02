@@ -133,101 +133,40 @@ nav {
   padding: 10px;
 }
 .videoContainer {
-  /* border: 1px solid blue; */
-  width: 62vw;
+  width: 94vw;
   height: 54vw;
-  /* max-width: 1200px; */
   max-width: 804px;
   max-height: 452px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: #a7b2b156; */
   background-color: #fbe5b3;
 }
 /* ---------galeria--------- */
 .galeria {
-  /* border: 1px solid blue; */
-  width: 95vw;
-  height: 65vh;
-  /* max-width: 1200px; */
+  width: 94vw;
+  height: 80vw;
   max-width: 804px;
   max-height: 452px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-color: #a7b2b156; */
   background-color: #fbe5b3;
 }
-#kiko-slider {
-  font-family: sans-serif;
-  margin: auto;
-  background-color: transparent;
-  max-width: 800px;
-  width: 100%;
-  padding: 30px;
-  box-sizing: border-box;
+.imgPrincipal {
+  margin-bottom: 4vh;
+  border-radius: 12px;
 }
-
-#kiko-slider > ul,
-li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.opciones {
+  display: flex;
+  flex-direction: row;
 }
-
-#kiko-slider > ul.slider {
-  position: relative;
-  max-width: 800px;
-  width: 100%;
-  height: 300px;
-}
-#kiko-slider > ul.slider li {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  opacity: 0;
-  width: inherit;
-  height: inherit;
-  transition: opacity 0.5s;
-  /* background: #fff; */
-}
-
-#kiko-slider > ul.slider li img {
-  width: 80vw;
-  height: 300px;
-  object-fit: cover;
-  /* border: solid 4px greenyellow; */
-}
-
-#kiko-slider > ul.slider li:first-child {
-  opacity: 1; /*Mostramos el primer <li>*/
-}
-
-#kiko-slider > ul.slider li:target {
-  opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
-}
-
-#kiko-slider > .menu {
-  text-align: center;
-  margin: 5px;
-}
-
-#kiko-slider > .menu li {
-  display: inline-block;
-  text-align: center;
-}
-
-#kiko-slider > .menu li a img {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  background-color: grey;
-  margin: 20px 10px 20px 10px;
-  width: 75px;
-  height: 75px;
-  font-size: 20px;
-  border-radius: 25%;
+.op {
+  width: 16vw;
+  height: 16vw;
+  margin: 0px 2.5vw;
+  border-radius: 12px;
 }
 /* ---------galeria--------- */
 /* ---------Main Fold--------- */
@@ -446,87 +385,31 @@ footer {
 
   /* ---------galeria--------- */
   .galeria {
-    /* border: 1px solid blue; */
-    width: 62vw;
-    height: 54vw;
-    /* max-width: 1200px; */
+    width: 94vw;
+    height: 80vw;
     max-width: 804px;
     max-height: 452px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: #a7b2b156; */
     background-color: #fbe5b3;
+    border-radius: 12px;
   }
-  #kiko-slider {
-    font-family: sans-serif;
-    margin: auto;
-    background-color: transparent;
-    max-width: 800px;
-    width: 100%;
-    padding: 30px;
-    box-sizing: border-box;
+  .imgPrincipal {
+    width: 40vw;
+    margin-bottom: 4vh;
+    border-radius: 12px;
   }
-
-  #kiko-slider > ul,
-  li {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  .opciones {
+    display: flex;
+    flex-direction: row;
   }
-
-  #kiko-slider > ul.slider {
-    position: relative;
-    max-width: 800px;
-    width: 100%;
-    height: 300px;
-  }
-  #kiko-slider > ul.slider li {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    opacity: 0;
-    width: inherit;
-    height: inherit;
-    transition: opacity 0.5s;
-    /* background: #fff; */
-  }
-
-  #kiko-slider > ul.slider li img {
-    width: 50%;
-    height: 300px;
-    margin-left: 25%;
-    object-fit: cover;
-  }
-
-  #kiko-slider > ul.slider li:first-child {
-    opacity: 1; /*Mostramos el primer <li>*/
-  }
-
-  #kiko-slider > ul.slider li:target {
-    opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
-  }
-
-  #kiko-slider > .menu {
-    text-align: center;
-    margin: 5px;
-  }
-
-  #kiko-slider > .menu li {
-    display: inline-block;
-    text-align: center;
-  }
-
-  #kiko-slider > .menu li a img {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    background-color: grey;
-    margin: 20px 10px 20px 10px;
-    width: 75px;
-    height: 75px;
-    font-size: 20px;
-    border-radius: 25%;
+  .op {
+    width: 8vw;
+    height: 8vw;
+    margin: 0px 2vw;
+    border-radius: 12px;
   }
   /* ---------galeria--------- */
 }

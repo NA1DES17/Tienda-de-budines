@@ -15,6 +15,8 @@ window.addEventListener("scroll", function () {
 });
 // --------------Sticky header---------------
 
+// --------------Slider---------------
+
 let slideIndex = 0;
 
 function showSlide(index) {
@@ -40,3 +42,6 @@ function moveSlide(step) {
 
 // Muestra el primer slide
 showSlide(slideIndex);
+// --------------Slider---------------
+// --------------Galeria---------------
+// --------------Galeria---------------
