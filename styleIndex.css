@@ -167,6 +167,16 @@ nav {
   height: 14vw;
   margin: 0px 2vw;
   border-radius: 12px;
+  border: none;
+}
+.imgOpc {
+  width: 14vw;
+  height: 14vw;
+  border-radius: 12px;
+}
+.op:hover {
+  transform: scale(1.05);
+  box-shadow: #ffbc42 2px 2px;
 }
 /* ---------galeria--------- */
 /* ---------Main Fold--------- */
@@ -409,6 +419,11 @@ footer {
     width: 8vw;
     height: 8vw;
     margin: 0px 2vw;
+    border-radius: 12px;
+  }
+  .imgOpc {
+    width: 8vw;
+    height: 8vw;
     border-radius: 12px;
   }
   /* ---------galeria--------- */

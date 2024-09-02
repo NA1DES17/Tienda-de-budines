@@ -44,4 +44,13 @@ function moveSlide(step) {
 showSlide(slideIndex);
 // --------------Slider---------------
 // --------------Galeria---------------
+document.addEventListener("DOMContentLoaded", function () {
+  const opButtons = document.querySelectorAll(".op");
+
+  opButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      console.log(button);
+    });
+  });
+});
 // --------------Galeria---------------
